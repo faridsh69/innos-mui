@@ -1,19 +1,44 @@
 {
-  "name": "innos-mui",
   "version": "1.0.0",
-  "description": "this is for design system 3",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "files": [
-    "dist"
-  ],
-  "type": "module",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
-  "scripts": {
-    "rollup": "rollup -c --bundleConfigAsCjs",
-    "build": "tsc",
-    "prepublishOnly": "npm run build"
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./styles": "./dist/style.css"
   },
+  "files": [
+    "/dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/material": "^6.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "sass-embedded": "^1.77.8",
+    "typescript": "^5.5.4",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.6.3"
+  },
+  "name": "innos-mui",
+  "description": "this is for design system 3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/faridsh69/innos-mui.git"
@@ -27,25 +52,5 @@
   "bugs": {
     "url": "https://github.com/faridsh69/innos-mui/issues"
   },
-  "homepage": "https://github.com/faridsh69/innos-mui#readme",
-  "publishConfig": {
-    "access": "public"
-  },
-  "peerDependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
-    "@mui/material": "^6.0.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
-  "devDependencies": {
-    "@rollup/plugin-commonjs": "^26.0.1",
-    "@rollup/plugin-node-resolve": "^15.2.3",
-    "@rollup/plugin-typescript": "^11.1.6",
-    "rollup": "^4.21.1",
-    "rollup-plugin-dts": "^6.1.1",
-    "tslib": "^2.7.0",
-    "typescript": "^5.5.4",
-    "rollup-plugin-sass": "^1.13.2"
-  }
+  "homepage": "https://github.com/faridsh69/innos-mui#readme"
 }

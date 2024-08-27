@@ -2,8 +2,15 @@
   "name": "innos-mui",
   "version": "1.0.0",
   "description": "this is for design system 3",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "rollup": "rollup -c --bundleConfigAsCjs",
     "build": "tsc",
     "prepublishOnly": "npm run build"
   },
@@ -32,10 +39,13 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "sass": "^1.77.8",
-    "typescript": "^5.5.4"
-  },
-  "dependencies": {
-    "node-sass": "^9.0.0"
+    "@rollup/plugin-commonjs": "^26.0.1",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-typescript": "^11.1.6",
+    "rollup": "^4.21.1",
+    "rollup-plugin-dts": "^6.1.1",
+    "tslib": "^2.7.0",
+    "typescript": "^5.5.4",
+    "rollup-plugin-sass": "^1.13.2"
   }
 }

@@ -1,3 +1,7 @@
 .button {
   width: 300px !important;
+
+  &:disabled {
+    color: red !important;
+  }
 }

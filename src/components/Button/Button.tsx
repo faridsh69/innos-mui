@@ -17,5 +17,12 @@ export const Button = (props: {
     disabled = false,
   } = props;
 
-  return <MuiButton className={styles.button}>222{label}</MuiButton>;
+  return (
+    <div>
+      <MuiButton className={styles.button}>222{label}</MuiButton>
+      <MuiButton className={styles.button} disabled>
+        disabled {label}
+      </MuiButton>
+    </div>
+  );
 };

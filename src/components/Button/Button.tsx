@@ -1,5 +1,21 @@
 import React from "react";
+import MuiButton from "@mui/material/Button";
+import styles from "./Button.module.scss";
 
-export const Button = (props: { label: string }) => {
-  return <button>{props.label}</button>;
+export const Button = (props: {
+  label: string;
+  variant: string;
+  color: string;
+  onClick: any;
+  disabled?: boolean;
+}) => {
+  const {
+    label,
+    variant = "light",
+    color = "success",
+    onClick,
+    disabled = false,
+  } = props;
+
+  return <MuiButton className={styles.button}>222{label}</MuiButton>;
 };

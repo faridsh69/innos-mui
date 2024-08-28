@@ -1,5 +1,4 @@
 {
-  "version": "1.0.0",
   "main": "dist/index.umd.js",
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
@@ -23,6 +22,29 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "description": "this is for design system 3",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faridsh69/innos-mui.git"
+  },
+  "author": "Farid Shahidi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faridsh69/innos-mui/issues"
+  },
+  "homepage": "https://github.com/faridsh69/innos-mui#readme",
+  "keywords": [
+    "innoscripta",
+    "mui"
+  ],
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.0",
+    "sass-embedded": "^1.77.8",
+    "typescript": "^5.5.4",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.6.3",
+    "vite-plugin-lib-inject-css": "^2.1.1"
+  },
   "peerDependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
@@ -30,27 +52,6 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^4.2.0",
-    "sass-embedded": "^1.77.8",
-    "typescript": "^5.5.4",
-    "vite": "^5.0.0",
-    "vite-plugin-dts": "^3.6.3"
-  },
   "name": "innos-mui",
-  "description": "this is for design system 3",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/faridsh69/innos-mui.git"
-  },
-  "keywords": [
-    "['innoscripta'",
-    "'mui']"
-  ],
-  "author": "Farid Shahidi",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/faridsh69/innos-mui/issues"
-  },
-  "homepage": "https://github.com/faridsh69/innos-mui#readme"
+  "version": "1.0.2"
 }
